@@ -1,0 +1,40 @@
+:root {
+  --bg1: #14191f;
+  --white: #fdfffc;
+  --lightGreen: #17b890;
+  --lightgrey: #71757a;
+  --darkgray: #262a2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  background: var(--bg1);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button,
+input {
+  display: block;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
