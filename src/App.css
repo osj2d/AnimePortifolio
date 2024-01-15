@@ -1,17 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sen:wght@800&display=swap");
 :root {
   --bg1: #14191f;
   --white: #fdfffc;
   --lightGreen: #17b890;
   --lightgrey: #71757a;
   --darkgray: #262a2f;
+  --type-first: "Inter", sans-serif;
+  --type-second: "Sen", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+  outline:none;
 }
 body {
   margin: 0px;
   background: var(--bg1);
+  font-family: var(--type-first);
+  color: var(--white);
 }
 h1,
 h2,
@@ -37,4 +43,12 @@ input {
 }
 a {
   text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 0 1rem;
+}
+.mainContainer {
+  margin-top: 2rem;
 }

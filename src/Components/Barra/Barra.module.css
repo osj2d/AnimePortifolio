@@ -1,0 +1,32 @@
+.barra {
+  position: relative;
+  padding: 0 5rem 0 5rem;
+  display: flex;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.125rem;
+  background: var(--darkgray);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline: 1px solid var(--lightGreen);
+}
+.btn {
+  position: absolute;
+  right: 6rem;
+  width: 25px;
+  height: 25px;
+  background: none;
+  border: none;
+  color: #A9A9AC;
+}
+.btn:hover {
+  color: var(--lightGreen);
+  cursor: pointer;
+}
