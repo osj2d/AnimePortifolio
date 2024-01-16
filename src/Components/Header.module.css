@@ -6,4 +6,5 @@
 .titulo {
   margin-top: 1rem;
   font-size: 3rem;
+  color: var(--white);
 }

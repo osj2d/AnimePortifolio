@@ -2,8 +2,12 @@ import { useState } from "react";
 
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Components/Home";
 import Header from "./Components/Header";
+import Home from "./Components/Home";
+import Anime from "./Components/Anime/Anime";
+import Manga from "./Components/Manga/Manga";
+import Characters from "./Components/Characters/Characters";
+
 
 function App() {
   return (
@@ -12,6 +16,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="anime" element={<Anime />} />
+          <Route path="mangas" element={<Manga />} />
+          <Route path="characters" element={<Characters />} />
+          {/* <Route path="*" element={<Home />} /> fazer o Notfound */}
         </Routes>
       </BrowserRouter>
     </>

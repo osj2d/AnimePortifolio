@@ -1,11 +1,15 @@
 import React from "react";
 import Barra from "./Barra/Barra";
+import Estrutura from "./Estrutura/";
+import styles from "./Home.module.css";
+import Sidebar from "./Sidebar/Sidebar";
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Barra />
-    </div>
+      <Estrutura />
+    </main>
   );
 };
 
