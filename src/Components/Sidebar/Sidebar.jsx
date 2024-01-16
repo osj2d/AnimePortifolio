@@ -4,7 +4,6 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const Tipos = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <aside className={styles.aside}>
       <NavLink to='/' >Season</NavLink>
