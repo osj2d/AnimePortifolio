@@ -1,28 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Barra from "./Barra/Barra";
-import Estrutura from "./Estrutura/";
-import { SEASSON_GET } from "../api";
+import { SEASSON_GET, TOP_ANIME_GET, TOP_MANGA_GET } from "../api";
 import useFetch from "../Hooks/useFetch";
+import Sidebar from "./Sidebar/Sidebar";
+import styles from "./Home.module.css";
+import Obras from "./Obras/Obras";
 
 const Home = () => {
-  const { data, error, loading, request } = useFetch();
 
-  React.useEffect(() => {
-    async function getDataSeasson() {
-      const { url, options } = SEASSON_GET();
-      await request(url, options);
-    }
-    getDataSeasson();
-  }, [request]);
-  if (error) return console.log(error);
-  if (loading) return console.log(loading);
-  if (data)
-    return (
-      <main>
-        <Barra />
-        <Estrutura data={data["data"]} />
-      </main>
-    );
+  const [type, setType] = useState("Seasson");
+
+  function onClick({ target }) {
+    setType(target.innerText);
+  }
+
+  return (
+    <main>
+      <Barra />
+      <div className={styles.conteudo}>
+        <div className={styles.caixa}>
+          <button onClick={onClick}>Seasson</button>
+          <button onClick={onClick}>Anime</button>
+          <button onClick={onClick}>Manga</button>
+        </div>
+        <div className={styles.caixa}>
+          <Obras type={type}/>
+        </div>
+        <div className={styles.caixa}></div>
+      </div>
+      {/* <Estrutura data={data["data"]} /> */}
+    </main>
+  );
 };
 
 export default Home;

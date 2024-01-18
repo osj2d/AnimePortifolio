@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import Anime from "./Components/Anime/Anime";
 import Manga from "./Components/Manga/Manga";
 import Characters from "./Components/Characters/Characters";
+import Barra from "./Components/Barra/Barra";
 
 
 function App() {

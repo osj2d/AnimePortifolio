@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.titulo {
+  position: absolute;
+  top: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  backdrop-filter: blur(10px);
+
+}

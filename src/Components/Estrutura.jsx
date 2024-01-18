@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./Estrutura.module.css";
 import Sidebar from "./Sidebar/Sidebar";
-
+import Card from "./Helper/Card";
 const estrutura = ({data}) => {
-  console.log('a', data)
   if(data == true) return <h1>nada</h1>
   return (
     <div className={styles.conteudo}>
@@ -11,8 +10,8 @@ const estrutura = ({data}) => {
         <Sidebar />
       </div>
       <div className={styles.caixa}>
-        {data.map((anime) => (
-          <h2 key={anime["mal_id"]}>{anime["title"]}</h2>
+        {data.map((obra) => (
+          <Card key={obra["mal_id"]} obra={obra} />          
         ))}
       </div>
       <div className={styles.caixa}></div>

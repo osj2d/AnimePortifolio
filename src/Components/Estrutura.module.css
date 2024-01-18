@@ -8,5 +8,8 @@
 }
 .caixa {
   border: 1px solid var(--darkgray);
-  height: 2000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 1rem;
 }

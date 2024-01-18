@@ -1,4 +1,4 @@
-.conteudo {
+/* .conteudo {
   margin-top: 4rem;
   border-top: 1px solid var(--darkgray);
   max-width: 70rem;
@@ -9,4 +9,15 @@
 .caixa {
   border: 1px solid var(--darkgray);
   height: 2000px;
+} */
+.conteudo {
+  margin-top: 4rem;
+  border-top: 1px solid var(--darkgray);
+  max-width: 70rem;
+  margin: 4rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 1fr;
+}
+.caixa {
+  border: 1px solid var(--darkgray);
 }

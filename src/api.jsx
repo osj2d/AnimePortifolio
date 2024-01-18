@@ -10,7 +10,15 @@ export function SEASSON_GET() {
 }
 export function TOP_ANIME_GET() {
   return {
-    url: Api_Url + "top/anime",
+    url: Api_Url + "top/anime?limit=10",
+    options: {
+      method: "GET",
+    },
+  };
+}
+export function TOP_MANGA_GET() {
+  return {
+    url: Api_Url + "top/manga?limit=10",
     options: {
       method: "GET",
     },

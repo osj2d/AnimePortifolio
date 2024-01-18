@@ -3,10 +3,12 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  align-items: start;
 }
 .aside a {
-  padding-left: 1rem;
+
 }
 .aside a:global(.active) {
   color: var(--white);
 }
+

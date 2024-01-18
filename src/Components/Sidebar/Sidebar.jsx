@@ -9,7 +9,6 @@ const Tipos = () => {
       <NavLink to='/' >Season</NavLink>
       <NavLink to='/anime' >Anime</NavLink>
       <NavLink to='/mangas'>Mangas</NavLink>
-      <NavLink to='/characters'>Characters</NavLink>
     </aside>
   );
 };

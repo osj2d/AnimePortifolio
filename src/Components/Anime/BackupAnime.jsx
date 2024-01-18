@@ -1,5 +1,6 @@
 import React from "react";
 import Estrutura from "../Estrutura";
+import Barra from "../Barra/Barra";
 import useFetch from "../../Hooks/useFetch";
 import { TOP_ANIME_GET } from "../../api";
 
@@ -18,6 +19,7 @@ const Anime = () => {
   if (data)
     return (
       <div>
+        <Barra />
         <Estrutura data={data["data"]} />
       </div>
     );
