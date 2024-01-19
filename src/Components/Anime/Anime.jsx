@@ -1,14 +1,10 @@
-import React from "react";
-import Estrutura from "../Estrutura";
-import Barra from "../Barra/Barra";
+
+import React from 'react'
 
 const Anime = () => {
   return (
-    <div>
-      <Barra />
-      <Estrutura />
-    </div>
-  );
-};
+    <div>Anime</div>
+  )
+}
 
-export default Anime;
+export default Anime
