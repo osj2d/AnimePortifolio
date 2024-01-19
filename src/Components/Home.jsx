@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import Barra from "./Barra/Barra";
-import { SEASSON_GET, TOP_ANIME_GET, TOP_MANGA_GET } from "../api";
-import useFetch from "../Hooks/useFetch";
-import Sidebar from "./Sidebar/Sidebar";
 import styles from "./Home.module.css";
 import Obras from "./Obras/Obras";
 
 const Home = () => {
 
-  const [type, setType] = useState("Seasson");
-
+  const [type, setType] = useState("Season");
   function onClick({ target }) {
+    console.log(target)
     setType(target.innerText);
   }
 
@@ -18,11 +15,11 @@ const Home = () => {
     <main>
       <Barra />
       <div className={styles.conteudo}>
-        <div className={styles.caixa}>
-          <button onClick={onClick}>Seasson</button>
-          <button onClick={onClick}>Anime</button>
-          <button onClick={onClick}>Manga</button>
-        </div>
+        <aside className={`${styles.caixa} ${styles.btns}`} >
+          <button className={`${styles.btn} ${type === 'Season' ? `${styles.ativo}` : ''}`} onClick={onClick}>Season</button>
+          <button className={`${styles.btn} ${type === 'Anime' ? `${styles.ativo}` : ''}`} onClick={onClick}>Anime</button>
+          <button className={`${styles.btn} ${type === 'Manga' ? `${styles.ativo}` : ''}`} onClick={onClick}>Manga</button>
+        </aside>
         <div className={styles.caixa}>
           <Obras type={type}/>
         </div>

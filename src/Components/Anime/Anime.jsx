@@ -1,26 +1,10 @@
-import React from "react";
-import Estrutura from "../Estrutura";
-import useFetch from "../../Hooks/useFetch";
-import { TOP_ANIME_GET } from "../../api";
+
+import React from 'react'
 
 const Anime = () => {
-  const { data, error, loading, request } = useFetch();
+  return (
+    <div>Anime</div>
+  )
+}
 
-  React.useEffect(() => {
-    async function getTopAnime() {
-      const { url, options } = TOP_ANIME_GET();
-      await request(url, options);
-    }
-    getTopAnime();
-  }, [request]);
-  if (error) return console.log(error);
-  if (loading) return console.log(loading);
-  if (data)
-    return (
-      <div>
-        <Estrutura data={data["data"]} />
-      </div>
-    );
-};
-
-export default Anime;
+export default Anime

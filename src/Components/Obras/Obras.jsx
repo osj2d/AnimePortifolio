@@ -10,7 +10,7 @@ const Obras = ({ type }) => {
   React.useEffect(() => {
     async function getData() {
       switch (type) {
-        case "Seasson": {
+        case "Season": {
           const { url, options } = SEASSON_GET();
           await request(url, options);
           break;

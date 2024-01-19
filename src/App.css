@@ -11,7 +11,7 @@
 
 * {
   box-sizing: border-box;
-  outline:none;
+  outline: none;
 }
 body {
   margin: 0px;
@@ -52,4 +52,7 @@ a {
 }
 .mainContainer {
   margin-top: 2rem;
+}
+.ativo {
+  color: var(--white);
 }
