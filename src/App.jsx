@@ -15,8 +15,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="anime" element={<Anime />} />
-          <Route path="mangas" element={<Manga />} />
+          <Route path="anime/:id" element={<Anime />} />
+          <Route path="mangas/:id" element={<Manga />} />
           {/* <Route path="*" element={<Home />} /> fazer o Notfound */}
         </Routes>
       </BrowserRouter>

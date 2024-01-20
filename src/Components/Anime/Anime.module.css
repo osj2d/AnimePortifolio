@@ -1,0 +1,24 @@
+.anime {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  padding: 0.5rem;
+  border: 1px solid var(--darkgray);
+}
+.titulo {
+  grid-column: 2 / -1;
+}
+.img {
+  grid-row: 1/4;
+}
+.synopsis {
+  grid-column: 2 / -1;
+  grid-row: 2 / 4;
+}
+.generos {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
