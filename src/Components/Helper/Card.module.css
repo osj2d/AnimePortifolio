@@ -1,16 +1,14 @@
 .card {
   display: flex;
   flex-direction: column;
-  position: relative;
-}
-.titulo {
-  position: absolute;
-  top: 0px;
-  white-space: nowrap;
   overflow: hidden;
+}
+
+.titulo {
   text-overflow: ellipsis;
-  max-width: 100%;
-  backdrop-filter: blur(10px);
+  overflow: hidden;
+  max-width: inherit;
+  white-space: nowrap;
 }
 .card:hover {
   cursor: pointer;

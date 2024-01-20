@@ -7,7 +7,6 @@ const Home = () => {
 
   const [type, setType] = useState("Season");
   function onClick({ target }) {
-    console.log(target)
     setType(target.innerText);
   }
 

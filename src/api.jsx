@@ -24,3 +24,19 @@ export function TOP_MANGA_GET() {
     },
   };
 }
+export function ANIME_ID_GET(id){
+  return {
+    url: Api_Url + `anime/${id}`,
+    options: {
+      method: "GET",
+    },
+  };
+}
+export function MANGA_ID_GET(id){
+  return {
+    url: Api_Url + `manga/${id}`,
+    options: {
+      method: "GET",
+    },
+  };
+}
