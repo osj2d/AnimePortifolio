@@ -27,10 +27,8 @@ const Anime = () => {
       rank,
       studios,
       genres,
-      trailer,
-      status,
+      status
     } = data["data"];
-    console.log(trailer);
     return (
       <div className={`${styles.anime} container mainContainer`}>
         <img
