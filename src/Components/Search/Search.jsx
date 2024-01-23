@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { Suspense, lazy } from "react";
+import { useLocation } from "react-router-dom";
+import Barra from "../Barra/Barra";
+// import SearchCard from "./SearchCard";
 
 const Search = () => {
-  return (
-    <div>Search</div>
-  )
-}
+  const { state } = useLocation();
+  const SearchCard = lazy(() => import("./SearchCard"));
 
-export default Search
+  return (
+    <div>
+      <Barra />
+      {/* Utilizei o suspense e lazy por conta da api que tem um limite de 3 requisição por segundo */}
+      <Suspense>
+        <SearchCard type={"anime"} value={state.search} time={0}/>
+      </Suspense>
+      <Suspense>
+        <SearchCard type={"manga"} value={state.search} time={500} />
+      </Suspense>
+    </div>
+  );
+};
+
+export default Search;

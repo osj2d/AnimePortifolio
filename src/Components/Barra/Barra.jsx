@@ -10,8 +10,11 @@ const Barra = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("teste");
-    navigate("/search");
+    navigate("/search", {
+      state:{
+        search
+      }
+    });
   }
 
   return (

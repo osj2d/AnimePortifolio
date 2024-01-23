@@ -1,0 +1,10 @@
+.obras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.title {
+  grid-column: 1 / -1;
+  color: var(--lightGreen);
+  text-transform: capitalize;
+}
