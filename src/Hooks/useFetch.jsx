@@ -13,6 +13,7 @@ const useFetch = () => {
       setLoading(true);
       response = await fetch(url, options);
       json = await response.json();
+      // VERIRICAR O CODIGO E FAZER UM ERRRO PRA CADA CONFROME A DOCUMENTAÇÃO
       if (response.ok === false) throw new Error(json.message);
     } catch (erro) {
       json = null;

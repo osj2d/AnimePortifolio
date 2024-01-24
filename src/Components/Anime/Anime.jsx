@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { ANIME_ID_GET } from "../../api";
 import useFetch from "../../Hooks/useFetch";
 import styles from "./Anime.module.css";
+import Error from "../Helper/Error";
+import Loading from "../Helper/Loading";
 
 const Anime = () => {
   const { id } = useParams();
@@ -15,8 +17,8 @@ const Anime = () => {
     }
     getAnime();
   }, [request, id]);
-  if (error) return console.log(error);
-  if (loading) return <p>Carregando</p>;
+  if (error) return <Error error={error} />;
+  if (loading) return <Loading />;
   if (data) {
     const {
       title,
@@ -27,7 +29,7 @@ const Anime = () => {
       rank,
       studios,
       genres,
-      status
+      status,
     } = data["data"];
     return (
       <div className={`${styles.anime} container mainContainer`}>

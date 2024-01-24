@@ -1,0 +1,6 @@
+.error {
+  color: #bf616a;
+  margin: 1rem;
+  text-align: center;
+  font-family: var(--type-second);
+}

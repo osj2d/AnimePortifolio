@@ -22,3 +22,35 @@
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 75rem) {
+  .anime {
+    grid-template-columns: 1fr 1fr;
+  }
+  .titulo {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .img {
+    grid-row: initial;
+    grid-column: initial;
+  }
+  .synopsis {
+    grid-row: initial;
+    grid-column: initial;
+  }
+  .generos {
+    grid-row: initial;
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 52rem) {
+
+  .img {
+    justify-self: center;
+    grid-column: 1 / -1;
+  }
+  .synopsis {
+    grid-column: 1 / -1;
+  }
+}

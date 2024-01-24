@@ -1,10 +1,22 @@
 .obras {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 200px);
   gap: 20px;
 }
 .title {
   grid-column: 1 / -1;
   color: var(--lightGreen);
   text-transform: capitalize;
+}
+@media (max-width: 75rem) {
+  .obras {
+    justify-content: center;
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+@media (max-width: 52rem) {
+  .obras {
+    justify-content: center;
+    grid-template-columns: repeat(2, 200px);
+  }
 }

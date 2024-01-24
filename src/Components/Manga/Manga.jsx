@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import { MANGA_ID_GET } from "../../api";
 import styles from "./Manga.module.css";
+import Error from "../Helper/Error";
+import Loading from "../Helper/Loading";
 
 const Manga = () => {
   const { id } = useParams();
@@ -16,8 +18,8 @@ const Manga = () => {
     getManga();
   }, [request, id]);
 
-  if (error) return <p>{error}</p>;
-  if (loading) return <p>Carregando</p>;
+  if (error) return <Error error={error} />;
+  if (loading) return <Loading />;
   if (data) {
     const {
       title,

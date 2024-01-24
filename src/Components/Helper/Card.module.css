@@ -1,7 +1,8 @@
 .card {
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
+}
+.link {
+  margin: 0 auto;
 }
 
 .titulo {
