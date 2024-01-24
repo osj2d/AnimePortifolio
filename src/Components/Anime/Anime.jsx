@@ -5,6 +5,7 @@ import useFetch from "../../Hooks/useFetch";
 import styles from "./Anime.module.css";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
+import Head from "../Helper/Head";
 
 const Anime = () => {
   const { id } = useParams();
@@ -55,6 +56,7 @@ const Anime = () => {
             <p key={gender["mal_id"]}>{gender["name"]}</p>
           ))}
         </div>
+        <Head title={title}/>
       </div>
     );
   }

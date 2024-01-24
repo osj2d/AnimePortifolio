@@ -56,3 +56,11 @@ a {
 .ativo {
   color: var(--white);
 }
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 5rem);
+}
+.appBody {
+  flex: 1;
+}

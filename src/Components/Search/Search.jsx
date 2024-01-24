@@ -1,10 +1,12 @@
 import React, { Suspense, lazy } from "react";
 import { useLocation } from "react-router-dom";
 import Barra from "../Barra/Barra";
+import Head from "../Helper/Head";
 // import SearchCard from "./SearchCard";
 
 const Search = () => {
   const { state } = useLocation();
+  console.log(state);
   const SearchCard = lazy(() => import("./SearchCard"));
 
   return (
@@ -17,6 +19,7 @@ const Search = () => {
       <Suspense>
         <SearchCard type={"manga"} value={state.search} time={1000} />
       </Suspense>
+      <Head title={"Search"}/>
     </div>
   );
 };
