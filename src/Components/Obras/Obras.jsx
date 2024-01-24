@@ -3,6 +3,8 @@ import useFetch from "../../Hooks/useFetch";
 import { SEASSON_GET, TOP_ANIME_GET, TOP_MANGA_GET } from "../../api";
 import Card from "../Helper/Card";
 import styles from './Obras.module.css'
+import Error from "../Helper/Error";
+import Loading from "../Helper/Loading";
 
 const Obras = ({ type }) => {
   const { data, error, loading, request } = useFetch();
@@ -32,8 +34,8 @@ const Obras = ({ type }) => {
     }
     getData();
   }, [request, type]);
-  if (error) return console.log(error);
-  if (loading) return <p>Carregando</p>;
+  if (error) return <Error error={error} />;
+  if (loading) return <Loading />;
   if (data)
     return (
       <div className={styles.containerObras}>

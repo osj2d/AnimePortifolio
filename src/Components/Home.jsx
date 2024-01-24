@@ -22,9 +22,7 @@ const Home = () => {
         <div className={styles.caixa}>
           <Obras type={type}/>
         </div>
-        <div className={styles.caixa}></div>
       </div>
-      {/* <Estrutura data={data["data"]} /> */}
     </main>
   );
 };

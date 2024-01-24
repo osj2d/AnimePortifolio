@@ -3,8 +3,11 @@ import useFetch from "../../Hooks/useFetch";
 import { SEARCH_GET } from "../../api";
 import Card from "../Helper/Card";
 import styles from './SearchCard.module.css'
+import Error from "../Helper/Error";
+import Loading from "../Helper/Loading";
 
-const SearchCard = ({ type, value, time }) => {
+
+const SearchCard = ({ type, value, time = 0 }) => {
   const { data, error, loading, request } = useFetch();
   React.useEffect(() => {
     async function getMangaSearch() {
@@ -17,8 +20,8 @@ const SearchCard = ({ type, value, time }) => {
       getMangaSearch();
     }, time);
   }, [request, value, type, time]);
-  if (error) return <p>{error}</p>;
-  if (loading) return <p>Carregando</p>;
+  if (error) return <Error error={error} />;
+  if (loading) return <Loading />;
 
   if (data) {
     return (

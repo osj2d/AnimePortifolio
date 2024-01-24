@@ -12,10 +12,10 @@ const Search = () => {
       <Barra />
       {/* Utilizei o suspense e lazy por conta da api que tem um limite de 3 requisição por segundo */}
       <Suspense>
-        <SearchCard type={"anime"} value={state.search} time={0}/>
+        <SearchCard type={"anime"} value={state.search} />
       </Suspense>
       <Suspense>
-        <SearchCard type={"manga"} value={state.search} time={500} />
+        <SearchCard type={"manga"} value={state.search} time={1000} />
       </Suspense>
     </div>
   );

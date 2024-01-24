@@ -1,6 +1,19 @@
 .containerObras {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 200px);
   gap: 20px;
   padding: 2rem 1rem;
+}
+@media (max-width: 75rem) {
+  .containerObras {
+    justify-content: center;
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+@media (max-width: 52rem) {
+  .containerObras {
+    grid-template-columns: repeat(2, 200px);
+    gap: 10px 20px;
+    
+  }
 }
