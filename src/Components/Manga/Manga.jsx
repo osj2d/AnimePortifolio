@@ -5,6 +5,7 @@ import { MANGA_ID_GET } from "../../api";
 import styles from "./Manga.module.css";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
+import Head from "../Helper/Head";
 
 const Manga = () => {
   const { id } = useParams();
@@ -60,6 +61,7 @@ const Manga = () => {
             <p key={gender["mal_id"]}>{gender["name"]}</p>
           ))}
         </div>
+        <Head title={title} />
       </div>
     );
   }
