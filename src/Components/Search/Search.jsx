@@ -6,7 +6,7 @@ import Head from "../Helper/Head";
 
 const Search = () => {
   const { state } = useLocation();
-  console.log(state);
+
   const SearchCard = lazy(() => import("./SearchCard"));
 
   return (

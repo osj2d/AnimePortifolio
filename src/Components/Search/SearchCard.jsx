@@ -2,21 +2,20 @@ import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import { SEARCH_GET } from "../../api";
 import Card from "../Helper/Card";
-import styles from './SearchCard.module.css'
+import styles from "./SearchCard.module.css";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
-
+import { motion } from "framer-motion";
 
 const SearchCard = ({ type, value, time = 0 }) => {
   const { data, error, loading, request } = useFetch();
   React.useEffect(() => {
     async function getMangaSearch() {
       const { url, options } = SEARCH_GET(type, value);
-      console.log(url);
+
       await request(url, options);
     }
     setTimeout(() => {
-      console.log(time)
       getMangaSearch();
     }, time);
   }, [request, value, type, time]);
@@ -26,9 +25,18 @@ const SearchCard = ({ type, value, time = 0 }) => {
   if (data) {
     return (
       <div className={`${styles.obras} container mainContainer`}>
-        <h2 className={styles.title}>{type}</h2>
+        <motion.h2
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className={styles.title}
+        >
+          {type}
+        </motion.h2>
         {data["data"].map((obra) => (
-          <Card key={obra["mal_id"]} obra={obra} tipo={type}/>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Card key={obra["mal_id"]} obra={obra} tipo={type} />
+          </motion.div>
         ))}
       </div>
     );
