@@ -12,7 +12,7 @@
 }
 @media (max-width: 52rem) {
   .containerObras {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px 20px;
     
   }

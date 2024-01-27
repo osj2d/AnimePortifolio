@@ -40,5 +40,10 @@
   }
 }
 @media (max-width: 52rem) {
-
+  .btn {
+    display: none;
+  }
+  .input::placeholder {
+    font-size: 0.8rem;
+  }
 }
