@@ -6,6 +6,7 @@ import styles from "./Anime.module.css";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 import Head from "../Helper/Head";
+import { motion } from "framer-motion";
 
 const Anime = () => {
   const { id } = useParams();
@@ -33,7 +34,11 @@ const Anime = () => {
       status,
     } = data["data"];
     return (
-      <div className={`${styles.anime} container mainContainer`}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{opacity: 1}}
+        className={`${styles.anime} container mainContainer`}
+      >
         <img
           className={styles.img}
           src={images["jpg"]["large_image_url"]}
@@ -56,8 +61,8 @@ const Anime = () => {
             <p key={gender["mal_id"]}>{gender["name"]}</p>
           ))}
         </div>
-        <Head title={title}/>
-      </div>
+        <Head title={title} />
+      </motion.div>
     );
   }
 };

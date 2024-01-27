@@ -6,6 +6,7 @@ import styles from "./Manga.module.css";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 import Head from "../Helper/Head";
+import { motion } from "framer-motion";
 
 const Manga = () => {
   const { id } = useParams();
@@ -33,9 +34,10 @@ const Manga = () => {
       genres,
       status,
     } = data["data"];
-    console.log(data);
     return (
-      <div className={`${styles.manga} container mainContainer`}>
+      <motion.div
+        className={`${styles.manga} container mainContainer`}
+      >
         <img
           className={styles.img}
           src={images["jpg"]["large_image_url"]}
@@ -62,7 +64,7 @@ const Manga = () => {
           ))}
         </div>
         <Head title={title} />
-      </div>
+      </motion.div>
     );
   }
 };
