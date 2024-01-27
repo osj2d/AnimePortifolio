@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NotFound.module.css";
-import SadAnime from "../../public/notFound.gif";
+import SadAnime from "../assets/notFound.gif";
 import Head from "./Helper/Head";
 import Footer from "./Footer";
 
@@ -12,7 +12,6 @@ const NotFound = () => {
         <img src={SadAnime} alt="Sad anime girl" />
       </div>
       <Head title="Not Found" />
-      <Footer />
     </div>
   );
 };
