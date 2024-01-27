@@ -17,6 +17,6 @@
 @media (max-width: 52rem) {
   .obras {
     justify-content: center;
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 180px);
   }
 }
